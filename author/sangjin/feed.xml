@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/sangjin/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-03-30T22:34:24+09:00</updated>
+  <updated>2021-03-31T01:58:59+09:00</updated>
   <id>http://localhost:4000/author/sangjin/feed.xml</id>
 
   
@@ -12,11 +12,11 @@
   
 
   
-    <title type="html">IT Technical Training | </title>
+    <title type="html">記憶より記録 | </title>
   
 
   
-    <subtitle>it</subtitle>
+    <subtitle>IT技術の勉強を記録ためのblogです。</subtitle>
   
 
   
@@ -39,11 +39,12 @@
       <id>http://localhost:4000/spring-2</id>
       <content type="html" xml:base="http://localhost:4000/spring-2">&lt;h1 id=&quot;object와-의존관계2&quot;&gt;Object와 의존관계(2)&lt;/h1&gt;
 &lt;hr /&gt;
-&lt;p&gt;스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.&lt;/p&gt;
+
+&lt;p&gt;저번 포스트에서는 인터페이스를 도입해도 구체적인 클래스를 요구하는 하는 것은 달라지지 않았습니다.&lt;/p&gt;
+
+&lt;p&gt;이제 Dependency injection을 도입해서 해결해 보겠습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=JI7RNrWqp7k&quot;&gt;백기선강사님유튜브&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;daodata-access-object를-가지고-설명&quot;&gt;DAO(Data-Access-Object)를 가지고 설명&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Dependency injection 적용&lt;/li&gt;
@@ -51,7 +52,99 @@
   &lt;li&gt;스프링 @IoC도입&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;5-dependency-injection-적용&quot;&gt;5. Dependency injection 적용&lt;/h2&gt;</content>
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;1-dependency-injection-적용&quot;&gt;1. Dependency injection 적용&lt;/h2&gt;
+
+&lt;p&gt;Dependency injection의 개념은 자신이 필요로하는 객체 즉, UserDao가 필요하는 의존성을 SimpleConnectionMaker를 자신이 생성하는 것(new)이 아니라 외부에서 주입 받는 것입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserDao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;ConnectionMaker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 기본 생성자&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UserDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// UserDao는 의존성을 받을 수 있는 장치를 마련해야합니다.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 생성자로 자신이 필요로하는 의존성을 주입할 수 있습니다.&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UserDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Connectionmaker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;connectionMaker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 또한 setter를 이용해서 주입받을 수 있습니다.&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setConncetionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ConnectionMaker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conncetionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;connectionMaker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이때 UserDao의 의존성을 누가 주입할까요?
+바로 UserDao를 사용하는 외부의 어떤 설정파일로 주입해줄 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;간단하게 UserDaoTest클레스에서 주입을 받아 보겠습니다.&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserDaoTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ClassNotFoundException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// ConnectionMaker타입의 simpleConnectionMaker를 만듦&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;ConnectionMaker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionMaker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;simpleConnectionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// UserDao의 생성자에 connectionMaker 주입&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;UserDao&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userDao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UserDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connectionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jin&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;진&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setPassword&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1993&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;userDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Dependency injection을 적용해봤습니다.
+Dependency injection은 스프링에만 국한 되어 있는 기술이 아니라 객체지향프로그래밍을 사용하면 객체간의 의존관계가 있을 때 사용할 수 있는 기술입니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;이제 위의 테스트 코드를 개선해보겠습니다.
+이 테스트 코드에는 책임이 두 가지 있습니다.&lt;/p&gt;
+
+&lt;p&gt;첫 번째는 ConnectionMaker 객체를 생성해서 UserDao에 주입해 관계를 맺는 일입니다.&lt;/p&gt;
+
+&lt;p&gt;두 번째는 주입받은 UserDao를 이용해서 기능을 테스트하는 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-factory-도입&quot;&gt;2. Factory 도입&lt;/h2&gt;
+
+&lt;p&gt;ConnectionMaker 객체 생성하는 기능을 Factory를 도입해서 개선하겠습니다.
+DaoFactory 클래스를 만듭니다.&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DaoFactory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// DaoFactory에서 UserDao객체를 만들어줌&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UserDao&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;userDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;ConnectionMaker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionMaker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;simpleConnectionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UserDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connectionMaker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이제 테스트 코드에서는 DaoFacory에서 UserDao를 가져오면 됩니다.&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserDaoTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ClassNotFoundException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SQLException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        
+        &lt;span class=&quot;n&quot;&gt;UserDao&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userDao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DaoFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;userDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;jin&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;진&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setPassword&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1993&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;userDao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;DaoFactory를 이용해서 테스트 코드의 ConnectionMaker객체 생성의 책임이 없어졌습니다. 온전히 test를 위한 책임만 있는 클래스로 개선되었습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-스프링-ioc도입&quot;&gt;3. 스프링 @IoC도입&lt;/h2&gt;</content>
 
       
       
@@ -72,7 +165,7 @@
       
 
       
-        <summary type="html">Object와 의존관계(2) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.</summary>
+        <summary type="html">Object와 의존관계(2)</summary>
       
 
       
@@ -98,12 +191,7 @@
   &lt;li&gt;중복제거&lt;/li&gt;
   &lt;li&gt;Connection생성 방식 확장(상속)&lt;/li&gt;
   &lt;li&gt;Connection생성 방식 확장(위임)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;인터페이스-도입&quot;&gt;인터페이스 도입&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Dependency injection 적용&lt;/li&gt;
-  &lt;li&gt;Factory 도입&lt;/li&gt;
-  &lt;li&gt;스프링 @IoC도입&lt;/li&gt;
+  &lt;li&gt;인터페이스 도입&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;간단한 id와 name, password를 가지는 User도메인 클래스입니다.&lt;/p&gt;

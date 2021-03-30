@@ -28,6 +28,9 @@
     <!-- 웹폰트 추가 -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 
+    <!-- 일본어 폰트 추가-->
+    
+
     <!-- syntax.css추가 -->
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
 
@@ -50,32 +53,16 @@
     <![endif]-->
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="it" />
+    <meta name="description" content="IT技術の勉強を記録ためのblogです。" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon.jpg" type="image/png" />
     <link rel="canonical" href="http://localhost:4000/spring-2" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="IT Technical Training" />
+    <meta property="og:site_name" content="記憶より記録" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Object와 의존관계(2)" />
-    <meta property="og:description" content="Object와 의존관계(2)
-
-스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.
-
-백기선강사님유튜브
-
-DAO(Data-Access-Object)를 가지고 설명
-
-
-  Dependency injection 적용
-  Factory 도입
-  스프링 @IoC도입
-
-
-5. Dependency injection 적용
-
-" />
+    <meta property="og:description" content="Object와 의존관계(2) 저번 포스트에서는 인터페이스를 도입해도 구체적인 클래스를 요구하는 하는 것은 달라지지 않았습니다. 이제 Dependency injection을 도입해서 해결해 보겠습니다. 백기선강사님유튜브 Dependency injection 적용 Factory 도입 스프링 @IoC도입 1. Dependency injection 적용 Dependency injection의 개념은 자신이 필요로하는 객체 즉, UserDao가 필요하는 의존성을 SimpleConnectionMaker를 자신이 생성하는 것(new)이 아니라 외부에서 주입 받는 것입니다." />
     <meta property="og:url" content="http://localhost:4000/spring-2" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -85,27 +72,11 @@ DAO(Data-Access-Object)를 가지고 설명
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Object와 의존관계(2)" />
-    <meta name="twitter:description" content="Object와 의존관계(2)
-
-스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.
-
-백기선강사님유튜브
-
-DAO(Data-Access-Object)를 가지고 설명
-
-
-  Dependency injection 적용
-  Factory 도입
-  스프링 @IoC도입
-
-
-5. Dependency injection 적용
-
-" />
+    <meta name="twitter:description" content="Object와 의존관계(2) 저번 포스트에서는 인터페이스를 도입해도 구체적인 클래스를 요구하는 하는 것은 달라지지 않았습니다. 이제 Dependency injection을 도입해서 해결해 보겠습니다. 백기선강사님유튜브 Dependency injection 적용 Factory 도입 스프링 @IoC도입 1. Dependency injection 적용 Dependency injection의 개념은 자신이 필요로하는 객체 즉, UserDao가 필요하는 의존성을 SimpleConnectionMaker를 자신이 생성하는 것(new)이 아니라 외부에서 주입 받는 것입니다." />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="IT Technical Training" />
+    <meta name="twitter:data1" content="記憶より記録" />
     <meta name="twitter:label2" content="Filed under" />
     <meta name="twitter:data2" content="Spring" />
     <meta name="twitter:site" content="@" />
@@ -119,7 +90,7 @@ DAO(Data-Access-Object)를 가지고 설명
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "IT Technical Training",
+        "name": "記憶より記録",
         "logo": "http://localhost:4000/"
     },
     "url": "http://localhost:4000/spring-2",
@@ -133,23 +104,7 @@ DAO(Data-Access-Object)를 가지고 설명
         "@type": "WebPage",
         "@id": "http://localhost:4000/spring-2"
     },
-    "description": "Object와 의존관계(2)
-
-스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.
-
-백기선강사님유튜브
-
-DAO(Data-Access-Object)를 가지고 설명
-
-
-  Dependency injection 적용
-  Factory 도입
-  스프링 @IoC도입
-
-
-5. Dependency injection 적용
-
-"
+    "description": "Object와 의존관계(2) 저번 포스트에서는 인터페이스를 도입해도 구체적인 클래스를 요구하는 하는 것은 달라지지 않았습니다. 이제 Dependency injection을 도입해서 해결해 보겠습니다. 백기선강사님유튜브 Dependency injection 적용 Factory 도입 스프링 @IoC도입 1. Dependency injection 적용 Dependency injection의 개념은 자신이 필요로하는 객체 즉, UserDao가 필요하는 의존성을 SimpleConnectionMaker를 자신이 생성하는 것(new)이 아니라 외부에서 주입 받는 것입니다."
 }
     </script>
 
@@ -181,7 +136,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="http://localhost:4000/">IT Technical Training</a>
+                <a class="site-nav-logo" href="http://localhost:4000/">記憶より記録</a>
             
         
         
@@ -245,11 +200,12 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <h1 id="object와-의존관계2">Object와 의존관계(2)</h1>
 <hr />
-<p>스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.</p>
+
+<p>저번 포스트에서는 인터페이스를 도입해도 구체적인 클래스를 요구하는 하는 것은 달라지지 않았습니다.</p>
+
+<p>이제 Dependency injection을 도입해서 해결해 보겠습니다.</p>
 
 <p><a href="https://www.youtube.com/watch?v=JI7RNrWqp7k">백기선강사님유튜브</a></p>
-
-<h2 id="daodata-access-object를-가지고-설명">DAO(Data-Access-Object)를 가지고 설명</h2>
 
 <ol>
   <li>Dependency injection 적용</li>
@@ -257,8 +213,99 @@ into the {body} of the default.hbs template -->
   <li>스프링 @IoC도입</li>
 </ol>
 
-<h2 id="5-dependency-injection-적용">5. Dependency injection 적용</h2>
+<hr />
 
+<h2 id="1-dependency-injection-적용">1. Dependency injection 적용</h2>
+
+<p>Dependency injection의 개념은 자신이 필요로하는 객체 즉, UserDao가 필요하는 의존성을 SimpleConnectionMaker를 자신이 생성하는 것(new)이 아니라 외부에서 주입 받는 것입니다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserDao</span> <span class="o">{</span>
+
+    <span class="n">ConnectionMaker</span> <span class="n">connectionMaker</span><span class="o">;</span>
+    <span class="c1">// 기본 생성자</span>
+    <span class="kd">public</span> <span class="nf">UserDao</span><span class="o">(){</span>
+    <span class="o">}</span>
+    <span class="c1">// UserDao는 의존성을 받을 수 있는 장치를 마련해야합니다.</span>
+    <span class="c1">// 생성자로 자신이 필요로하는 의존성을 주입할 수 있습니다.</span>
+    <span class="kd">public</span> <span class="nf">UserDao</span><span class="o">(</span><span class="n">Connectionmaker</span> <span class="n">connectionMaker</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">connectionMaker</span> <span class="o">=</span> <span class="n">connectionMaker</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 또한 setter를 이용해서 주입받을 수 있습니다.</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setConncetionMaker</span><span class="o">(</span><span class="n">ConnectionMaker</span> <span class="n">conncetionMaker</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">connectionMaker</span> <span class="o">=</span> <span class="n">connectionMaker</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>이때 UserDao의 의존성을 누가 주입할까요?
+바로 UserDao를 사용하는 외부의 어떤 설정파일로 주입해줄 수 있습니다.</p>
+
+<p>간단하게 UserDaoTest클레스에서 주입을 받아 보겠습니다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserDaoTest</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ClassNotFoundException</span><span class="o">,</span> <span class="n">SQLException</span> <span class="o">{</span>
+        <span class="c1">// ConnectionMaker타입의 simpleConnectionMaker를 만듦</span>
+        <span class="n">ConnectionMaker</span> <span class="n">connectionMaker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">simpleConnectionMaker</span><span class="o">();</span>
+        <span class="c1">// UserDao의 생성자에 connectionMaker 주입</span>
+        <span class="n">UserDao</span> <span class="n">userDao</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UserDao</span><span class="o">(</span><span class="n">connectionMaker</span><span class="o">);</span>
+
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="o">();</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="s">"jin"</span><span class="o">);</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"진"</span><span class="o">);</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="s">"1993"</span><span class="o">);</span>
+
+        <span class="n">userDao</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
+
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>Dependency injection을 적용해봤습니다.
+Dependency injection은 스프링에만 국한 되어 있는 기술이 아니라 객체지향프로그래밍을 사용하면 객체간의 의존관계가 있을 때 사용할 수 있는 기술입니다.</p>
+
+<hr />
+<p>이제 위의 테스트 코드를 개선해보겠습니다.
+이 테스트 코드에는 책임이 두 가지 있습니다.</p>
+
+<p>첫 번째는 ConnectionMaker 객체를 생성해서 UserDao에 주입해 관계를 맺는 일입니다.</p>
+
+<p>두 번째는 주입받은 UserDao를 이용해서 기능을 테스트하는 것입니다.</p>
+
+<h2 id="2-factory-도입">2. Factory 도입</h2>
+
+<p>ConnectionMaker 객체 생성하는 기능을 Factory를 도입해서 개선하겠습니다.
+DaoFactory 클래스를 만듭니다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DaoFactory</span> <span class="o">{</span>
+    <span class="c1">// DaoFactory에서 UserDao객체를 만들어줌</span>
+    <span class="kd">public</span> <span class="n">UserDao</span> <span class="nf">userDao</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">ConnectionMaker</span> <span class="n">connectionMaker</span> <span class="o">=</span> <span class="k">new</span> <span class="n">simpleConnectionMaker</span><span class="o">();</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">UserDao</span><span class="o">(</span><span class="n">connectionMaker</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>이제 테스트 코드에서는 DaoFacory에서 UserDao를 가져오면 됩니다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserDaoTest</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ClassNotFoundException</span><span class="o">,</span> <span class="n">SQLException</span> <span class="o">{</span>
+        
+        <span class="n">UserDao</span> <span class="n">userDao</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DaoFactory</span><span class="o">().</span><span class="na">userDao</span><span class="o">();</span>
+
+        <span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="o">();</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="s">"jin"</span><span class="o">);</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"진"</span><span class="o">);</span>
+        <span class="n">user</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="s">"1993"</span><span class="o">);</span>
+
+        <span class="n">userDao</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">user</span><span class="o">);</span>
+
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>DaoFactory를 이용해서 테스트 코드의 ConnectionMaker객체 생성의 책임이 없어졌습니다. 온전히 test를 위한 책임만 있는 클래스로 개선되었습니다.</p>
+
+<h2 id="3-스프링-ioc도입">3. 스프링 @IoC도입</h2>
 
                 </div>
             </section>
@@ -267,7 +314,7 @@ into the {body} of the default.hbs template -->
             <!--
             
                 <section class="subscribe-form">
-                    <h3 class="subscribe-form-title">Subscribe to IT Technical Training</h3>
+                    <h3 class="subscribe-form-title">Subscribe to 記憶より記録</h3>
                     <p>Get the latest posts delivered right to your inbox</p>
                     <span id="searchform" method="post" action="/subscribe/" class="">
     <input class="confirm" type="hidden" name="confirm"  />
@@ -358,7 +405,7 @@ into the {body} of the default.hbs template -->
                         
                     >
                         <header class="read-next-card-header">
-                            <small class="read-next-card-header-sitetitle">&mdash; IT Technical Training &mdash;</small>
+                            <small class="read-next-card-header-sitetitle">&mdash; 記憶より記録 &mdash;</small>
                             
                                 <h3 class="read-next-card-header-title"><a href="/tag/spring/">Spring</a></h3>
                             
@@ -461,7 +508,7 @@ into the {body} of the default.hbs template -->
     <div class="floating-header-logo">
         <a href="http://localhost:4000/">
             
-            <span>IT Technical Training</span>
+            <span>記憶より記録</span>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
@@ -501,7 +548,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/">IT Technical Training</a> &copy; 2021</section>
+                <section class="copyright"><a href="http://localhost:4000/">記憶より記録</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
@@ -522,7 +569,7 @@ into the {body} of the default.hbs template -->
             <a class="subscribe-overlay-close" href="#"></a>
             <div class="subscribe-overlay-content">
                 
-                <h1 class="subscribe-overlay-title">Search IT Technical Training</h1>
+                <h1 class="subscribe-overlay-title">Search 記憶より記録</h1>
                 <p class="subscribe-overlay-description">
                 lunr.js를 이용한 posts 검색 </p>
                 <span id="searchform" method="post" action="/subscribe/" class="">

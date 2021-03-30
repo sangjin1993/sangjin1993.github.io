@@ -28,6 +28,9 @@
     <!-- 웹폰트 추가 -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 
+    <!-- 일본어 폰트 추가-->
+    
+
     <!-- syntax.css추가 -->
     <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
 
@@ -50,16 +53,16 @@
     <![endif]-->
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="it" />
+    <meta name="description" content="IT技術の勉強を記録ためのblogです。" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon.jpg" type="image/png" />
     <link rel="canonical" href="http://localhost:4000/spring-1" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="IT Technical Training" />
+    <meta property="og:site_name" content="記憶より記録" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Object와 의존관계(1)" />
-    <meta property="og:description" content="Object와 의존관계(1) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다. 백기선강사님유튜브 DAO(Data-Access-Object)를 가지고 설명 DAO는 데이터접근에 관련한 클레스로 중복이 많이 발생하는 대표적인 클레스입니다. 이 클레스를 가지고 단계별로 스프링의　dependency injection과 Ioc를 설명하겠습니다. 중복제거 Connection생성 방식 확장(상속) Connection생성 방식 확장(위임) 인터페이스 도입 Dependency injection 적용" />
+    <meta property="og:description" content="Object와 의존관계(1) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다. 백기선강사님유튜브 DAO(Data-Access-Object)를 가지고 설명 DAO는 데이터접근에 관련한 클레스로 중복이 많이 발생하는 대표적인 클레스입니다. 이 클레스를 가지고 단계별로 스프링의　dependency injection과 Ioc를 설명하겠습니다. 중복제거 Connection생성 방식 확장(상속) Connection생성 방식 확장(위임) 인터페이스 도입 간단한 id와 name," />
     <meta property="og:url" content="http://localhost:4000/spring-1" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -69,11 +72,11 @@
     <meta property="article:tag" content="Spring" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Object와 의존관계(1)" />
-    <meta name="twitter:description" content="Object와 의존관계(1) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다. 백기선강사님유튜브 DAO(Data-Access-Object)를 가지고 설명 DAO는 데이터접근에 관련한 클레스로 중복이 많이 발생하는 대표적인 클레스입니다. 이 클레스를 가지고 단계별로 스프링의　dependency injection과 Ioc를 설명하겠습니다. 중복제거 Connection생성 방식 확장(상속) Connection생성 방식 확장(위임) 인터페이스 도입 Dependency injection 적용" />
+    <meta name="twitter:description" content="Object와 의존관계(1) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다. 백기선강사님유튜브 DAO(Data-Access-Object)를 가지고 설명 DAO는 데이터접근에 관련한 클레스로 중복이 많이 발생하는 대표적인 클레스입니다. 이 클레스를 가지고 단계별로 스프링의　dependency injection과 Ioc를 설명하겠습니다. 중복제거 Connection생성 방식 확장(상속) Connection생성 방식 확장(위임) 인터페이스 도입 간단한 id와 name," />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="IT Technical Training" />
+    <meta name="twitter:data1" content="記憶より記録" />
     <meta name="twitter:label2" content="Filed under" />
     <meta name="twitter:data2" content="Spring" />
     <meta name="twitter:site" content="@" />
@@ -87,7 +90,7 @@
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "IT Technical Training",
+        "name": "記憶より記録",
         "logo": "http://localhost:4000/"
     },
     "url": "http://localhost:4000/spring-1",
@@ -101,7 +104,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/spring-1"
     },
-    "description": "Object와 의존관계(1) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다. 백기선강사님유튜브 DAO(Data-Access-Object)를 가지고 설명 DAO는 데이터접근에 관련한 클레스로 중복이 많이 발생하는 대표적인 클레스입니다. 이 클레스를 가지고 단계별로 스프링의　dependency injection과 Ioc를 설명하겠습니다. 중복제거 Connection생성 방식 확장(상속) Connection생성 방식 확장(위임) 인터페이스 도입 Dependency injection 적용"
+    "description": "Object와 의존관계(1) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다. 백기선강사님유튜브 DAO(Data-Access-Object)를 가지고 설명 DAO는 데이터접근에 관련한 클레스로 중복이 많이 발생하는 대표적인 클레스입니다. 이 클레스를 가지고 단계별로 스프링의　dependency injection과 Ioc를 설명하겠습니다. 중복제거 Connection생성 방식 확장(상속) Connection생성 방식 확장(위임) 인터페이스 도입 간단한 id와 name,"
 }
     </script>
 
@@ -133,7 +136,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="http://localhost:4000/">IT Technical Training</a>
+                <a class="site-nav-logo" href="http://localhost:4000/">記憶より記録</a>
             
         
         
@@ -208,12 +211,7 @@ into the {body} of the default.hbs template -->
   <li>중복제거</li>
   <li>Connection생성 방식 확장(상속)</li>
   <li>Connection생성 방식 확장(위임)</li>
-  <li>
-    <h2 id="인터페이스-도입">인터페이스 도입</h2>
-  </li>
-  <li>Dependency injection 적용</li>
-  <li>Factory 도입</li>
-  <li>스프링 @IoC도입</li>
+  <li>인터페이스 도입</li>
 </ol>
 
 <p>간단한 id와 name, password를 가지는 User도메인 클래스입니다.</p>
@@ -527,7 +525,7 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
             <!--
             
                 <section class="subscribe-form">
-                    <h3 class="subscribe-form-title">Subscribe to IT Technical Training</h3>
+                    <h3 class="subscribe-form-title">Subscribe to 記憶より記録</h3>
                     <p>Get the latest posts delivered right to your inbox</p>
                     <span id="searchform" method="post" action="/subscribe/" class="">
     <input class="confirm" type="hidden" name="confirm"  />
@@ -618,7 +616,7 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
                         
                     >
                         <header class="read-next-card-header">
-                            <small class="read-next-card-header-sitetitle">&mdash; IT Technical Training &mdash;</small>
+                            <small class="read-next-card-header-sitetitle">&mdash; 記憶より記録 &mdash;</small>
                             
                                 <h3 class="read-next-card-header-title"><a href="/tag/spring/">Spring</a></h3>
                             
@@ -770,7 +768,7 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
     <div class="floating-header-logo">
         <a href="http://localhost:4000/">
             
-            <span>IT Technical Training</span>
+            <span>記憶より記録</span>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
@@ -810,7 +808,7 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/">IT Technical Training</a> &copy; 2021</section>
+                <section class="copyright"><a href="http://localhost:4000/">記憶より記録</a> &copy; 2021</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
@@ -831,7 +829,7 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
             <a class="subscribe-overlay-close" href="#"></a>
             <div class="subscribe-overlay-content">
                 
-                <h1 class="subscribe-overlay-title">Search IT Technical Training</h1>
+                <h1 class="subscribe-overlay-title">Search 記憶より記録</h1>
                 <p class="subscribe-overlay-description">
                 lunr.js를 이용한 posts 검색 </p>
                 <span id="searchform" method="post" action="/subscribe/" class="">
