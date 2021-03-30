@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/sangjin/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-03-30T20:56:51+09:00</updated>
+  <updated>2021-03-30T22:00:30+09:00</updated>
   <id>http://localhost:4000/author/sangjin/feed.xml</id>
 
   
@@ -32,12 +32,60 @@
 
   
     <entry>
-      <title type="html">Object와 의존관계</title>
-      <link href="http://localhost:4000/spring" rel="alternate" type="text/html" title="Object와 의존관계" />
-      <published>2021-03-20T01:40:00+09:00</published>
-      <updated>2021-03-20T01:40:00+09:00</updated>
-      <id>http://localhost:4000/spring</id>
-      <content type="html" xml:base="http://localhost:4000/spring">&lt;h1 id=&quot;object와-의존관계&quot;&gt;Object와 의존관계&lt;/h1&gt;
+      <title type="html">Object와 의존관계(2)</title>
+      <link href="http://localhost:4000/spring-2" rel="alternate" type="text/html" title="Object와 의존관계(2)" />
+      <published>2021-03-30T21:40:00+09:00</published>
+      <updated>2021-03-30T21:40:00+09:00</updated>
+      <id>http://localhost:4000/spring-2</id>
+      <content type="html" xml:base="http://localhost:4000/spring-2">&lt;h1 id=&quot;object와-의존관계2&quot;&gt;Object와 의존관계(2)&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=JI7RNrWqp7k&quot;&gt;백기선강사님유튜브&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;daodata-access-object를-가지고-설명&quot;&gt;DAO(Data-Access-Object)를 가지고 설명&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Dependency injection 적용&lt;/li&gt;
+  &lt;li&gt;Factory 도입&lt;/li&gt;
+  &lt;li&gt;스프링 @IoC도입&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;5-dependency-injection-적용&quot;&gt;5. Dependency injection 적용&lt;/h2&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>sangjin</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="spring" />
+      
+
+      
+        <summary type="html">Object와 의존관계(2) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Object와 의존관계(1)</title>
+      <link href="http://localhost:4000/spring-1" rel="alternate" type="text/html" title="Object와 의존관계(1)" />
+      <published>2021-03-29T21:40:00+09:00</published>
+      <updated>2021-03-29T21:40:00+09:00</updated>
+      <id>http://localhost:4000/spring-1</id>
+      <content type="html" xml:base="http://localhost:4000/spring-1">&lt;h1 id=&quot;object와-의존관계1&quot;&gt;Object와 의존관계(1)&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.&lt;/p&gt;
 
@@ -50,7 +98,9 @@
   &lt;li&gt;중복제거&lt;/li&gt;
   &lt;li&gt;Connection생성 방식 확장(상속)&lt;/li&gt;
   &lt;li&gt;Connection생성 방식 확장(위임)&lt;/li&gt;
-  &lt;li&gt;인터페이스 도입&lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;인터페이스-도입&quot;&gt;인터페이스 도입&lt;/h2&gt;
+  &lt;/li&gt;
   &lt;li&gt;Dependency injection 적용&lt;/li&gt;
   &lt;li&gt;Factory 도입&lt;/li&gt;
   &lt;li&gt;스프링 @IoC도입&lt;/li&gt;
@@ -176,6 +226,7 @@
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id=&quot;2-connection생성-방식-확장상속---탬플릿-메서드-패턴&quot;&gt;2. Connection생성 방식 확장(상속) - 탬플릿 메서드 패턴&lt;/h2&gt;
 &lt;p&gt;makeConnection()메서드를 만들어서 중복제거를 해결했습니다.
@@ -355,7 +406,9 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;인터페이스를 사용해서 관계가 느슨해졌을까요? 아닙니다. 여전히 UserDao클래스에서 구체적인 클래스(SimpleConnectionMaker)를 쓰고있습니다. 단지 인터페이스를 사용해서 makeConnection()메서드를 보장 받을 수 있게되었습니다. ConnectionMaker이 다른 구현체를 사용해도 makeConnection()메서드는 보장 받을 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ConnectionMaker connectionMaker = new SimpleConnectionMaker();&lt;/code&gt;은 어떻게 해야할까요?&lt;/p&gt;</content>
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ConnectionMaker connectionMaker = new SimpleConnectionMaker();&lt;/code&gt;은 어떻게 해야할까요?&lt;/p&gt;
+
+&lt;p&gt;다음 포스트에서 설명하겠습니다.&lt;/p&gt;</content>
 
       
       
@@ -376,7 +429,7 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
       
 
       
-        <summary type="html">Object와 의존관계 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.</summary>
+        <summary type="html">Object와 의존관계(1) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.</summary>
       
 
       
@@ -386,8 +439,8 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
     <entry>
       <title type="html">java 강좌(1) - java 기본</title>
       <link href="http://localhost:4000/java-basic" rel="alternate" type="text/html" title="java 강좌(1) - java 기본" />
-      <published>2018-09-28T01:40:00+09:00</published>
-      <updated>2018-09-28T01:40:00+09:00</updated>
+      <published>2021-03-28T01:40:00+09:00</published>
+      <updated>2021-03-28T01:40:00+09:00</updated>
       <id>http://localhost:4000/java-basic</id>
       <content type="html" xml:base="http://localhost:4000/java-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;java 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
