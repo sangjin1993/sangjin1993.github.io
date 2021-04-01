@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/author/sangjin/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-03-31T01:58:59+09:00</updated>
+  <updated>2021-04-01T16:26:06+09:00</updated>
   <id>http://localhost:4000/author/sangjin/feed.xml</id>
 
   
@@ -518,52 +518,6 @@ SimpleConnectionMaker클래스를 만들어 NUserDao에 있던 코드를 옮깁�
 
       
         <summary type="html">Object와 의존관계(1) 스프링 Dependency injection에 대해서 공부하던 중 백기선 강사님의 유튜브에 깔끔하게 설명한 강의가 있어 참고하여 정리하였습니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">java 강좌(1) - java 기본</title>
-      <link href="http://localhost:4000/java-basic" rel="alternate" type="text/html" title="java 강좌(1) - java 기본" />
-      <published>2021-03-28T01:40:00+09:00</published>
-      <updated>2021-03-28T01:40:00+09:00</updated>
-      <id>http://localhost:4000/java-basic</id>
-      <content type="html" xml:base="http://localhost:4000/java-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;java 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./java-basic&quot;&gt;Java 강좌(1) - Java 기본&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-control-statement&quot;&gt;Java 강좌(2) - Java 제어문&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이글은 java에 관한 포스트입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>sangjin</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">java 강좌는 여러 절로 구성되어 있습니다. Java 강좌(1) - Java 기본 Java 강좌(2) - Java 제어문</summary>
       
 
       
