@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-01T20:23:37+09:00</updated><id>http://localhost:4000/</id><title type="html">記憶より記録</title><subtitle>IT技術の勉強を記録ためのblogです。</subtitle><entry><title type="html">Object와 의존관계(2)</title><link href="http://localhost:4000/spring-2" rel="alternate" type="text/html" title="Object와 의존관계(2)" /><published>2021-03-30T21:40:00+09:00</published><updated>2021-03-30T21:40:00+09:00</updated><id>http://localhost:4000/spring-2</id><content type="html" xml:base="http://localhost:4000/spring-2">&lt;h1 id=&quot;object와-의존관계2&quot;&gt;Object와 의존관계(2)&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-02T19:52:07+09:00</updated><id>http://localhost:4000/</id><title type="html">記憶より記録</title><subtitle>IT技術の勉強を記録ためのblogです。</subtitle><entry><title type="html">日本語能力試験N1文法 (1)</title><link href="http://localhost:4000/japanese-1" rel="alternate" type="text/html" title="日本語能力試験N1文法 (1)" /><published>2021-04-01T21:40:00+09:00</published><updated>2021-04-01T21:40:00+09:00</updated><id>http://localhost:4000/japanese-1</id><content type="html" xml:base="http://localhost:4000/japanese-1">&lt;p&gt;일본어능력시험N1를 합격하기 위해서 정리한 글입니다.&lt;/p&gt;
+
+&lt;p&gt;자신을 위해서 정리한 내용이므로 의역이나 틀린 것이 있을 수 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1課時間関係&quot;&gt;1課　時間関係&lt;/h2&gt;
+&lt;h3 id=&quot;1-が早いか&quot;&gt;1. 〜が早いか&lt;/h3&gt;
+&lt;p&gt;⇒　するとすぐ続いて次のことが起こる。&lt;br /&gt;
+~하면 바로 계속해서 다음 것이 일어난다.&lt;br /&gt;
+동사의 사전형 / た형 + が早いか&lt;br /&gt;
+순간적인 것을 표현하는 동사를 사용. 이후에는, 화자가 조금 의외감(?)을 같고 사실을 표현하는 문장이 나옴. 화자의 회망, 의향을 표현하는 문장이나 주장은 안 나옴.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-やや否や&quot;&gt;2. 〜や•〜や否や&lt;/h3&gt;
+&lt;p&gt;⇒　〜とほとんど同時に次のことが起こる。&lt;br /&gt;
+~와 함깨 동시에 다음 것이 일어남.&lt;br /&gt;
+동사의 사전형 + 〜や•〜や否や&lt;br /&gt;
+순간적인 것을 표현하는 동사를 사용. 이후에는, 사실을 표현하는 문장이 나옴. 화자의 희망, 의향을 표현하는 문장이나 주장은 안 나옴.&lt;/p&gt;
+
+&lt;h3 id=&quot;3なり&quot;&gt;3.　〜なり&lt;/h3&gt;
+&lt;p&gt;⇒　〜という動作にすぐ連続して次のことをする。&lt;br /&gt;
+~라고하는 동작에 바로 연속해서 다음 것을 함.
+동사 사전형 + なり
+이후에는, 조금 의외감이 있고 의식적인 동작을 표현하는 문장이 옴. 주어는 보통 3인칭으로, 전후의 주어는 같다.&lt;/p&gt;
+
+&lt;h3 id=&quot;4そばから&quot;&gt;4.　〜そばから&lt;/h3&gt;
+&lt;p&gt;⇒　〜をしても、すぐにそれに対抗するような動きがあり、それを何度も繰り返す。&lt;br /&gt;
+~을 해도, 바로 그것에 대항하는 움직임이 있고, 그것을 몇 번이고 반복함.
+동사 사전형 / た형 + そばから
+좋지 않은 것에 사용하는 것이 많음.&lt;/p&gt;
+
+&lt;h3 id=&quot;5てからというものは&quot;&gt;5.　〜てからというもの(は)&lt;/h3&gt;
+&lt;p&gt;⇒　〜してからある変化が起こり、その後ずっと同じ状態が続いている。&lt;br /&gt;
+~해서 어떤 변화가 일어나, 그후 계속 같은 상태가 계속되고 있음.&lt;br /&gt;
+동사 て형 + からというもの&lt;br /&gt;
+별로 가까운 과거의 기간에는 사용하지 않음. 이후에는, 변화 후의 상태가 계속해서 있는 것을 표현하는 문장이 옮.&lt;/p&gt;
+
+&lt;h3 id=&quot;6にあって&quot;&gt;6.　〜にあって&lt;/h3&gt;
+&lt;p&gt;⇒　〜のような特別な状況だからこそあることが起こる•〜のような特別な状況でもあることが起こる。&lt;br /&gt;
+~와 같은 특별한 상황이기 때문에 어떤 일이 일어남, ~와 같은 특별한 상황이라도 어떤 일이 일어남.&lt;br /&gt;
+명사 + にあって&lt;br /&gt;
+상황, 시기, 장소 등을 표현하는 명사를 사용. 이후에는 이런 상황이 없었으면 일어나지 않았을 것을 말하는 문장 또는 상황을 반하는 것을 말하는 문장이 옮. 이 경우 「〜にあっても」라는 형식이 있음.&lt;/p&gt;</content><author><name>sangjin</name></author><category term="japanese" /><summary type="html">일본어능력시험N1를 합격하기 위해서 정리한 글입니다.</summary></entry><entry><title type="html">Object와 의존관계(2)</title><link href="http://localhost:4000/spring-2" rel="alternate" type="text/html" title="Object와 의존관계(2)" /><published>2021-03-30T21:40:00+09:00</published><updated>2021-03-30T21:40:00+09:00</updated><id>http://localhost:4000/spring-2</id><content type="html" xml:base="http://localhost:4000/spring-2">&lt;h1 id=&quot;object와-의존관계2&quot;&gt;Object와 의존관계(2)&lt;/h1&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;저번 포스트에서는 인터페이스를 도입해도 구체적인 클래스를 요구하는 하는 것은 달라지지 않았습니다.&lt;/p&gt;
