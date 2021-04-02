@@ -4,7 +4,7 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:4000/japanese-1.html</loc>
+        <loc>https://sangjin1993.github.io/japanese-1.html</loc>
         
         <lastmod>2021-04-01T21:40:00+09:00</lastmod>
         
@@ -20,7 +20,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/spring-2.html</loc>
+        <loc>https://sangjin1993.github.io/spring-2.html</loc>
         
         <lastmod>2021-03-30T21:40:00+09:00</lastmod>
         
@@ -36,7 +36,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/spring-1.html</loc>
+        <loc>https://sangjin1993.github.io/spring-1.html</loc>
         
         <lastmod>2021-03-29T21:40:00+09:00</lastmod>
         
