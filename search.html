@@ -54,8 +54,8 @@
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT技術の勉強を記録ためのblogです。" />
-    <link rel="shortcut icon" href="https://sangjin1993.github.io/assets/built/images/favicon.jpg" type="image/png" />
-    <link rel="canonical" href="https://sangjin1993.github.io/search" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon.jpg" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/search" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -63,14 +63,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Search Result" />
     <meta property="og:description" content="IT技術の勉強を記録ためのblogです。" />
-    <meta property="og:url" content="https://sangjin1993.github.io/search" />
-    <meta property="og:image" content="https://sangjin1993.github.io/assets/built/images/blog-cover1.png" />
+    <meta property="og:url" content="http://localhost:4000/search" />
+    <meta property="og:image" content="http://localhost:4000/assets/built/images/blog-cover1.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Search Result" />
     <meta name="twitter:description" content="IT技術の勉強を記録ためのblogです。" />
-    <meta name="twitter:url" content="https://sangjin1993.github.io/" />
-    <meta name="twitter:image" content="https://sangjin1993.github.io/assets/built/images/blog-cover1.png" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/blog-cover1.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="記憶より記録" />
     <meta name="twitter:site" content="@" />
@@ -85,18 +85,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "記憶より記録",
-        "logo": "https://sangjin1993.github.io/"
+        "logo": "http://localhost:4000/"
     },
-    "url": "https://sangjin1993.github.io/search",
+    "url": "http://localhost:4000/search",
     "image": {
         "@type": "ImageObject",
-        "url": "https://sangjin1993.github.io/assets/built/images/blog-cover1.png",
+        "url": "http://localhost:4000/assets/built/images/blog-cover1.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://sangjin1993.github.io/search"
+        "@id": "http://localhost:4000/search"
     },
     "description": "IT技術の勉強を記録ためのblogです。"
 }
@@ -130,7 +130,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://sangjin1993.github.io/">記憶より記録</a>
+                <a class="site-nav-logo" href="http://localhost:4000/">記憶より記録</a>
             
         
         
@@ -147,6 +147,7 @@ into the {body} of the default.hbs template -->
         <a href="/author_archive.html">Tag Posts</a>
     </li>
 </ul>
+
         
     </div>
     <div class="site-nav-right">
@@ -187,6 +188,15 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
+    
+    "java-functionalinterface-lambda": {
+        "title": "Java8 (1) 함수형 인터페이스와 람다표현식",
+            "author": "sangjin",
+            "category": "",
+            "content": "Java8에서 추가된 기능들을 정리하는 포스트입니다.함수형 인터페이스와 람다 표현식이 포스트에서는 Java8에서 추가된 함수형 인터페이스와 람다에 대해서 포스트하겠습니다.함수형 인터페이스함수형 인터페이스란 추상 메소드가 하나인 인터페이스(SAM-Single Abstract Method)를 말합니다.함수형 인터페이스를 정의 할 때는 @FunctionalInterface 어노테이션을 사용할 수 있습니다.이 어노테이션을 사용시 문법에 위반되면 에러가 발생 됩니다.@FunctionalInterfacepublic interface FunctionalInterfaceExam {\t// 인터페이스에서 abstract를 생략 할수 있음 밑에있는것과 같은 것//\tabstract void doIt();\tvoid doIt();\t// 두 개가 있다 함수형인터페이스가 아님//\tvoid doItAgain();\t// java8 부터 인터페이스 안에 static 메소드를 정의 할 수 있음\tstatic void printName() {\t\tSystem.out.println(\"SangJin\");\t}\t// java8 부터 default 메소드도 정의 할 수 있음\tdefault void printAge() {\t\tSystem.out.println(\"28\");\t}\t// 함수형 인터페이스는 다른 메소드가 있어도 되지만 추상메소드는 오직 하나일 때만}람다 표현식(Lambda Expressions)람다 함수는 익명 함수(Anonymous functions)를 지칭하는 용어입니다.익명함수란함수의 이름이 없는 함수입니다. 익명함수들의 공통으로 일급객체(First Class citizen)라는 특징을 가지고 있습니다.일급겍체란 일반적으로 다른 객체들에 적용 가능한 연산을 모두 지원하는 객체를 가르킵니다. 함수를 값으로 사용할 수도 있드며 파라미터로 전달 및 변수에 대입하는 연산이 가능합니다.public class FunctionalInterfaceRun {\tpublic static void main(String[] args) {\t\t// Java8 이전에는 익명 내부 클래스 anonymous inner class\t\tFunctionalInterfaceExam runSomething1 = new FunctionalInterfaceExam() {\t\t\t@Override\t\t\tpublic void doIt() {\t\t\t\tSystem.out.println(\"Hello anonymous inner class\");\t\t\t}\t\t};\t\t// 실행\t\trunSomething1.doIt();\t\t// 위의 코드를 람다로 표현하면\t\tFunctionalInterfaceExam runSomething2 = () -&gt; System.out.println(\"Hello Lambda\");\t\t// 실행\t\trunSomething2.doIt();\t\t// 실행할 코드가 두 줄 이상일 때\t\tFunctionalInterfaceExam runSomething3 = () -&gt; {\t\t\tSystem.out.println(\"Hello\");\t\t\tSystem.out.println(\"Lambda\");\t\t};\t\t// 실행\t\trunSomething3.doIt();\t\t/*\t\t *  람다 표현식을 쓰면 어떤 함수를 정의한거 처럼 보이지만\t\t *  자바에서는 특수한 형태의 오브젝트임 \t\t *  함수형 인터페이스를 인라인으로 구현한 오브젝트로 볼 수있음\t\t *  이러한 형태를 함수처럼 보이지만 사실상 자바는 객체지향 언어라\t\t *  이것을 변수에 할당하고 이것을 메소드 파라미터를 전달하고 리턴타입으로 리턴할 수 있음\t\t *  이 말은 자바에서 함수를 First class object로 사용할 수 있다는 말임 \t\t */\t}}Java에서 함수형 프로그래밍  함수를 First Class Object로 사용할 수 있다.  순수 함수(Pure function)          사이드 이펙트가 없다. (함수 밖에서 있는 값을 변경하지 않는다.)      상태가 없다. (함수 밖에 값을 사용하지 않는다.)        고차 함수(Higher-Order-Function)          함수가 함수를 매개변수로 받을 수 있고 함수를 리턴할 수도 있다.        불변성수학적인 함수에서 가장 중요한 것은 입력받은 값이 동일한 경우 결과가 같아야 된다.순수함수// 어떤 값을 받고 리턴하는 메서드를 함수형 인터페이스@FunctionalInterfacepublic interface PureFunction {    int doIt(int number);}public class PureFunctionRun {    public static void main(String[] args) {                PureFunction runPureFunction = (number) -&gt; {            return number + 10;        }        // 동일한 값을 입력받으면 같은값(11)이 나와야한다.        System.out.println(runPureFunction.doIt(1));        System.out.println(runPureFunction.doIt(1));        System.out.println(runPureFunction.doIt(1));        // 12가 나와야 한다.        System.out.println(runPureFunction.doIt(2));        System.out.println(runPureFunction.doIt(2));        System.out.println(runPureFunction.doIt(2));    }}동일한 값이 안나오는 이유는 함수 안에서 밖에 있는 값을 참조해서 쓰는 경우public class PureFunctionRun {\tpublic static void main(String[] args) {\t\t// 함수의 밖 있는 값\t\tint baseNumber = 10;\t\t// 이런 경우는 상태값을 가지고 있다 어떤 값에 의존한다라고 해서 퓨어한 함수가 아님\t\tPureFunction runPureFunction1 = new PureFunction() {\t\t\t// 여기도 함수의 밖에 있는 값\t\t\tint baseNumber = 10;\t\t\t@Override\t\t\tpublic int doIt(int number) {\t\t\t\treturn number + baseNumber;\t\t\t}\t\t};\t\t// 또다른 케이스는 외부에 있는 값을 변경할려는 경우\t\t// 여기에 선언된 변수를 사용하면 문법적으로 안됌//\t\tint baseNumber1 = 10;\t\tPureFunction runPureFunction2 = new PureFunction() {\t\t\t// 이 경우는 문법적으로 가능\t\t\t// 가능하지만 퓨어한 함수가 아님\t\t\tint baseNumber1 = 10;\t\t\t@Override\t\t\tpublic int doIt(int number) {\t\t\t\tbaseNumber1++;\t\t\t\treturn number + baseNumber1;\t\t\t}\t\t};\t\tfinal int baseNumber2 = 10;\t\tPureFunction runPureFunction3 = new PureFunction() {\t\t\t@Override\t\t\tpublic int doIt(int number) {\t\t\t\treturn number + baseNumber2;\t\t\t}\t\t};\t\t// 밖에서 변경할려고 하면 오류 -&gt; 이유는 baseNumber2를 파이널이라고 가정하고 쓰는 것!!//\t\tbaseNumber2++;\t}}",
+        "url": "/java-functionalInterface_lambda"
+    }
+    ,
     
     "japanese-1": {
         "title": "日本語能力試験N1文法 (1)",
@@ -244,15 +254,14 @@ $(function() {
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://sangjin1993.github.io/">記憶より記録</a> &copy; 2021</section>
-                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                <section class="copyright"><a href="http://localhost:4000/">記憶より記録</a> &copy; 2021</section>
+                <!--<section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
-                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section> -->
                 <nav class="site-footer-nav">
                     <a href="/">Latest Posts</a>
                     
                     
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
                 </nav>
             </div>
         </footer>

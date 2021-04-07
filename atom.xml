@@ -4,7 +4,24 @@
     <title> - Articles</title>
     <description>IT技術の勉強を記録ためのblogです。</description>
     <link>
-    https://sangjin1993.github.io</link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>Java8 (1) 함수형 인터페이스와 람다표현식</title>
+        
+          <description>&lt;p&gt;Java8에서 추가된 기능들을 정리하는 포스트입니다.&lt;/p&gt;
+&lt;h1 id=&quot;함수형-인터페이스와-람다-표현식&quot;&gt;함수형 인터페이스와 람다 표현식&lt;/h1&gt;
+&lt;p&gt;이 포스트에서는 Java8에서 추가된 함수형 인터페이스와 람다에 대해서 포스트하겠습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 07 Apr 2021 01:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/java-functionalInterface_lambda</link>
+        <guid isPermaLink="true">http://localhost:4000/java-functionalInterface_lambda</guid>
+      </item>
+      
     
       
       <item>
@@ -16,8 +33,8 @@
         
         <pubDate>Thu, 01 Apr 2021 21:40:00 +0900</pubDate>
         <link>
-        https://sangjin1993.github.io/japanese-1</link>
-        <guid isPermaLink="true">https://sangjin1993.github.io/japanese-1</guid>
+        http://localhost:4000/japanese-1</link>
+        <guid isPermaLink="true">http://localhost:4000/japanese-1</guid>
       </item>
       
     
@@ -32,8 +49,8 @@
         
         <pubDate>Tue, 30 Mar 2021 21:40:00 +0900</pubDate>
         <link>
-        https://sangjin1993.github.io/spring-2</link>
-        <guid isPermaLink="true">https://sangjin1993.github.io/spring-2</guid>
+        http://localhost:4000/spring-2</link>
+        <guid isPermaLink="true">http://localhost:4000/spring-2</guid>
       </item>
       
     
@@ -49,8 +66,8 @@
         
         <pubDate>Mon, 29 Mar 2021 21:40:00 +0900</pubDate>
         <link>
-        https://sangjin1993.github.io/spring-1</link>
-        <guid isPermaLink="true">https://sangjin1993.github.io/spring-1</guid>
+        http://localhost:4000/spring-1</link>
+        <guid isPermaLink="true">http://localhost:4000/spring-1</guid>
       </item>
       
     
