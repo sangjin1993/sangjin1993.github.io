@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/japanese/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-04-07T20:45:11+09:00</updated>
-  <id>http://localhost:4000/tag/japanese/feed.xml</id>
+  <link href="https://sangjin1993.github.io/tag/japanese/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://sangjin1993.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-04-07T22:04:43+09:00</updated>
+  <id>https://sangjin1993.github.io/tag/japanese/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">日本語能力試験N1文法 (1)</title>
-      <link href="http://localhost:4000/japanese-1" rel="alternate" type="text/html" title="日本語能力試験N1文法 (1)" />
+      <link href="https://sangjin1993.github.io/japanese-1" rel="alternate" type="text/html" title="日本語能力試験N1文法 (1)" />
       <published>2021-04-01T21:40:00+09:00</published>
       <updated>2021-04-01T21:40:00+09:00</updated>
-      <id>http://localhost:4000/japanese-1</id>
-      <content type="html" xml:base="http://localhost:4000/japanese-1">&lt;p&gt;일본어능력시험N1를 합격하기 위해서 정리한 글입니다.&lt;/p&gt;
+      <id>https://sangjin1993.github.io/japanese-1</id>
+      <content type="html" xml:base="https://sangjin1993.github.io/japanese-1">&lt;p&gt;일본어능력시험N1를 합격하기 위해서 정리한 글입니다.&lt;/p&gt;
 
 &lt;p&gt;자신을 위해서 정리한 내용이므로 의역이나 틀린 것이 있을 수 있습니다.&lt;/p&gt;
 
